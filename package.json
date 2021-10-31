@@ -1,0 +1,43 @@
+{
+  "name": "inspire-the-coder",
+  "displayName": "Inspire The Coder",
+  "description": "Displays an inspirational quote on VS Code to give the user an extra boost ;)",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.61.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:inspire-the-coder.inspireMe"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "inspire-the-coder.inspireMe",
+        "title": "Inspire Me"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.4",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "14.17.27",
+    "@types/vscode": "^1.61.0",
+    "@vscode/test-electron": "^1.6.2",
+    "eslint": "^8.1.0",
+    "glob": "^7.1.7",
+    "mocha": "^9.1.3",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "inspirational-quotes": "^2.0.1"
+  }
+}
